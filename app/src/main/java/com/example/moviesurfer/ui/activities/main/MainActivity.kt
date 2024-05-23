@@ -1,5 +1,6 @@
 package com.example.moviesurfer.ui.activities.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -10,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import com.example.moviesurfer.R
 import com.example.moviesurfer.databinding.ActivityMainBinding
+import com.example.moviesurfer.ui.activities.search.SearchActivity
 import com.example.moviesurfer.ui.fragments.movies.MoviesFragment
 import com.example.moviesurfer.ui.fragments.series.SeriesFragment
 import com.example.moviesurfer.viewModel.Movie100ViewModel
@@ -67,6 +69,10 @@ class MainActivity : AppCompatActivity() {
             transaction.replace(R.id.fragmentContainerView, SeriesFragment())
             transaction.addToBackStack(null) // Optional: Add the transaction to the back stack
             transaction.commit()
+        }
+
+        binding.mainAppBar.icSearch.setOnClickListener{
+            startActivity(Intent(this, SearchActivity::class.java))
         }
     }
 }
