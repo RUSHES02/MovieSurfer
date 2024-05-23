@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MovieSurfer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movies">Movies</string>
+    <string name="series">Series</string>
+
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="with_google">with google</string>
+    <string name="concat">%1$s %2$s</string>
+
+</resources>

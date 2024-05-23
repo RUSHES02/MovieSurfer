@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.activities.main.MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlineMainRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlineMainLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlineMainMid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlineMainBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <include
+        android:id="@+id/mainAppBar"
+        layout="@layout/toolbar_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerCorosel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-50dp"
+        app:layout_constraintBottom_toTopOf="@+id/gdlineMainMid"
+        app:layout_constraintEnd_toStartOf="@+id/gdlineMainRight"
+        app:layout_constraintStart_toStartOf="@+id/gdlineMainLeft"
+        app:layout_constraintTop_toBottomOf="@+id/mainAppBar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonMovies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_button_active"
+        android:minHeight="0dp"
+        android:padding="10dp"
+        android:text="@string/movies"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/gdlineMainLeft"
+        app:layout_constraintTop_toTopOf="@+id/gdlineMainMid" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSeries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_button_inactive"
+        android:minHeight="0dp"
+        android:padding="10dp"
+        android:text="@string/series"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/buttonMovies"
+        app:layout_constraintTop_toTopOf="@+id/gdlineMainMid" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.moviesurfer.ui.fragments.movies.MoviesFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/gdlineMainBottom"
+        app:layout_constraintEnd_toStartOf="@+id/gdlineMainRight"
+        app:layout_constraintStart_toStartOf="@+id/gdlineMainLeft"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSeries" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "497367293915",
+    "project_id": "moviesurfer-565e6",
+    "storage_bucket": "moviesurfer-565e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497367293915:android:cfa68c0a219f8fd97211fe",
+        "android_client_info": {
+          "package_name": "com.example.moviesurfer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeuTx_qszuyMETmbDEQJ4XgjDMzeLWs74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
