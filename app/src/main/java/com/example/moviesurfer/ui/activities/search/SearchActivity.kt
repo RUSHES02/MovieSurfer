@@ -7,6 +7,8 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.addTextChangedListener
+import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
@@ -37,5 +39,7 @@ class SearchActivity : AppCompatActivity() {
         })
 
         movie100ViewModel.fetchMovies()
+        
+        binding.textSearch.addTextChangedListener {  }
     }
 }
